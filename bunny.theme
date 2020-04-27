@@ -1,5 +1,29 @@
 <?php
 
+function bunny_preprocess_html(&$variables)
+{
+    // https://stackoverflow.com/questions/6771258/what-does-meta-http-equiv-x-ua-compatible-content-ie-edge-do
+    $http_equiv = [
+        '#type' => 'html_tag',
+        '#tag' => 'meta',
+        '#attributes' => [
+            'http-equiv' => 'x-ua-compatible',
+            'content' => 'ie=edge',
+        ],
+    ];
+    $variables['page']['#attached']['html_head'][] = [$http_equiv, 'http-equiv'];
+
+    $themeHandler = \Drupal::service('theme_handler');
+    $themeName = $themeHandler->getDefault();
+    $extensionInfo = $themeHandler->listInfo()[$themeName] ?? '';
+
+    /*
+    if ($extensionInfo) {
+        echo '<pre>' . var_export($extensionInfo->info['fonts'], true) . '</pre>';
+    }
+    */
+}
+
 function bunny_page_attachments_alter(array &$attachments)
 {
     foreach ($attachments['#attached']['html_head'] as $key => $attachment) {
