@@ -1,14 +1,11 @@
 name: Bunny
 type: theme
 base theme: false
-description: 'A magic bunny, containing some frontend magic 🐰'
+description: "A magic bunny, containing some frontend magic 🐰"
 package: Wieni
 version: 1.0
 core: 8.x
 core_version_requirement: ^8 || ^9
-
-dependencies:
-  - components
 
 # Remove some of the default Drupal libraries, that include some style we don't need.
 libraries-override:
@@ -19,7 +16,7 @@ regions:
   # This is the default region where all blocks/content are rendered.
   content: Content
   # Place messages and/or admin tabs here.
-  admin_tools: 'Admin tools'
+  admin_tools: "Admin tools"
 
 # Makes it possible to include components using {% include "@component-library-name/component/card.html.twig %}
 component-libraries:
