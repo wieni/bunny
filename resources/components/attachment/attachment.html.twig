@@ -1,0 +1,14 @@
+<a href="{{url}}" class="attachment" download>
+  {% if not hideIcon %}
+  <div class="attachment__icon">
+    <svg class="attachment__box" width="52" height="62" viewBox="0 0 52 62"><defs><filter x="-42.9%" y="-42.9%" width="185.7%" height="185.7%" filterUnits="objectBoundingBox" id="a"><feGaussianBlur stdDeviation="2" in="SourceGraphic"/></filter></defs><g fill="none" fill-rule="evenodd"><path fill="#E9F7FF" d="M0 2h35.013L50 17.003V62H0z"/><path fill="#ADDBF4" opacity=".75" filter="url(#a)" d="M48 15v1H34V2h1l3.584 9.584z" transform="translate(0 2)"/><path fill="#E9F7FF" d="M50 17H35V2z"/></g></svg>
+    <span class="attachment__extension">{{extension}}</span>
+  </div>
+  {% endif %}
+  <div class="attachment__content">
+    <span class="attachment__link" download target="_blank" rel="nofollow noreferrer">{{text}}</span>
+    <div class="attachment__meta">
+      {{meta}}
+    </div>
+  </div>
+</a>
