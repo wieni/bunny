@@ -1,4 +1,11 @@
-<div class="l-page l-page--login">
-	{{ page.admin_tools }}
-	{{ page.content }}
+<div class="l-login">
+
+    <div class="l-login__box">
+        <div class="l-login__logo">
+            {% include "@components/logo/logo.svg" %}
+        </div>
+	    {{ page.admin_tools }}
+
+        {{ page.content }}
+    </div>
 </div>
