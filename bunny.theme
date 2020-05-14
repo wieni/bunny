@@ -22,3 +22,17 @@ function bunny_page_attachments_alter(array &$attachments)
         }
     }
 }
+
+function bunny_preprocess_links__dropbutton(&$variables)
+{
+    $index = 0;
+    foreach ($variables['links'] as &$link) {
+        $link['link']['#attributes']['class'][] = ($index == 0) ? 'btn is-primary is-small' : 'dropdown-item';
+        $index++;
+    }
+}
+
+function bunny_preprocess_menu_local_task(&$variables)
+{
+    $variables['link']['#attributes']['class'][] = 'dropdown-item';
+}
