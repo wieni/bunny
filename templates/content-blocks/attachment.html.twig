@@ -5,7 +5,7 @@
 	{% include "@components/attachment/attachment.html.twig" with {
       url: attachment.file|downloadUrl,
       text: text,
-      meta: attachment.file|file_extension|upper ~ ' - ' ~ attachment.file.size|format_bytes,
-      extension: attachment.file|file_extension|upper,
+      meta: attachment.file|fileExtension|upper ~ ' - ' ~ attachment.file.size|formatBytes,
+      extension: attachment.file|fileExtension|upper,
     } only %}
 {% endfor %}
