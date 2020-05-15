@@ -29,3 +29,5 @@ component-libraries:
   components:
     paths:
       - resources/components
+## Optional configuration
+# gtm: {gtm-id}
