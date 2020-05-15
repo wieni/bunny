@@ -14,13 +14,18 @@
     <js-placeholder token="{{ placeholder_token }}">
 
     {% include "@components/google-tag-manager/gtm-head.html.twig" %}
+
+    {% block head_content %}{% endblock head_content %}
   </head>
   <body{{ attributes.addClass(body_classes) }}>
+    {% block body_top_content %}{% endblock body_top_content %}
+
     {% include "@components/google-tag-manager/gtm-body.html.twig" %}
 
     {{ page_top }}
     {{ page }}
     {{ page_bottom }}
     <js-bottom-placeholder token="{{ placeholder_token }}">
+    {% block body_bottom_content %}{% endblock body_bottom_content %}
   </body>
 </html>
