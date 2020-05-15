@@ -1,0 +1,8 @@
+{% set icons = [].join(drupackIcons) %}
+<svg style="display: none;">
+  <defs>
+    {% for icon in icons %}
+      {% include ['@icon/'~ icon '.html.twig'] %}
+    {% endfor %}
+  </defs>
+</svg>
