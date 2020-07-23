@@ -11,7 +11,7 @@
     ],
     "require": {
         "php": ">=7.1",
-        "drupal/components": "^1.1",
+        "drupal/components": "*",
         "drupal/core": "^8.0 || ^9.0"
     },
     "require-dev": {
