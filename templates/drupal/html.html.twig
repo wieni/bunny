@@ -18,9 +18,9 @@
     {% block head_content %}{% endblock head_content %}
   </head>
   <body{{ attributes.addClass(body_classes) }}>
-    {% block body_top_content %}{% endblock body_top_content %}
-
     {% include "@components/google-tag-manager/gtm-body.html.twig" %}
+
+    {% block body_top_content %}{% endblock body_top_content %}
 
     {{ page_top }}
     {{ page }}
